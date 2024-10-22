@@ -13,7 +13,7 @@ int main(void)
 {
 	char lettersL = 97;
 
-	while (lettersL < 122)
+	while (lettersL < 123)
 	{
 		if (lettersL != 113 && lettersL != 101)
 		{
