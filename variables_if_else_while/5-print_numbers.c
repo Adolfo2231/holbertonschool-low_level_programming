@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * Print all single-digit numbers from 0 to 9.
+ * Print all single-digit numbers from 0 to 9
+ * with loop while
+ *
 */
 
 int main(void)
