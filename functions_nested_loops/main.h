@@ -1,22 +1,23 @@
-#include <stdio.h>
-
 /**
- * main - Entry point
+ *string - Prints a string followed by a new line
+ * @str: Pointer to the string to be printed
  *
- * Description: Prints _putchar followed by a new line
- * Return: Always 0 (Success)
+ * putchar to add a new line
+ *
+ * Description: This function takes a pointer to a string as input
+ * and prints each character in the string until it encounters the
+ * newline character '\n'. After printing the string, a new line is
+ * printed.
  */
 
-int main(void)
+void string(const char *str)
 {
-	char *str = "_putchar";
 	int i = 0;
 
-	for (; i < 8; i++)
+	while (str[i] != '\n')
 	{
 		putchar(str[i]);
+		i++;
 	}
 	putchar('\n');
-
-	return (0);
 }
