@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - Prints single-digit numbers from 0 to 9
+ * main - Entry point
  *
+ * Description: Prints all single-digit numbers separated by ", "
+ * in ascending order using only putchar
  * Return: Always 0 (Success)
  */
 
