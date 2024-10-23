@@ -16,7 +16,7 @@ void string(const char *str)
 
 	while (str[i] != '\n')
 	{
-		write(str[i]);
+		putchar(str[i]);
 		i++;
 	}
 	putchar('\n');
