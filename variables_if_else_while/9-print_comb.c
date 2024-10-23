@@ -9,7 +9,7 @@
 int main(void)
 {
         int n = 0;
-	int d = 36;
+	
         while (n < 10)
         {
                 putchar(n + '0');
