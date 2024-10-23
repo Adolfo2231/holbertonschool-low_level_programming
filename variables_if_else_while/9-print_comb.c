@@ -21,10 +21,9 @@ int main(void)
 		}
 		else
 	       	{
-			
+		putchar('$');
 		}
                 n++;
         }
-        putchar(36);
 	return (0);
 }
