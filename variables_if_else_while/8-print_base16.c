@@ -8,12 +8,13 @@
 
 int main(void)
 {
-	int i;
-	for (i = 0; i < 16; i++)
+	char hex[] = "0123456789abcdef";
+	int i = 0;
+
+	for (; i < 16; i++)
 	{
-		printf("%x", i);
+		putchar(hex[i]);
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
-
