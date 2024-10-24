@@ -1,23 +1,13 @@
+#include <unistd.h>
+ 
 /**
- *string - Prints a string followed by a new line
- * @str: Pointer to the string to be printed
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
  *
- * putchar to add a new line
- *
- * Description: This function takes a pointer to a string as input
- * and prints each character in the string until it encounters the
- * newline character '\n'. After printing the string, a new line is
- * printed.
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
-void string(const char *str)
+int _putchar(char c)
 {
-	int i = 0;
-
-	while (str[i] != '\n')
-	{
-		putchar(str[i]);
-		i++;
-	}
-	putchar('\n');
+	return (write(1, &c, 1));
 }
