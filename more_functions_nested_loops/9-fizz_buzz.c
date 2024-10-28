@@ -15,17 +15,17 @@ void multiplo(int n)
 	int multiplo3 = n % 3;
 	int multiplo5 = n % 5;
 
-	if (multiplo3 == 0)
+	if (multiplo3 == 0 && multiplo5 == 0)
+	{
+		printf("FizzBuzz ");
+	}
+	else if (multiplo3 == 0)
 	{
 		printf("Fizz ");
 	}
 	else if (multiplo5 == 0)
 	{
 		printf("Buzzz ");
-	}
-	else if (multiplo3 == 0 && multiplo5 == 0)
-	{
-		printf("FizzBuzz ");
 	}
 	else
 	{
