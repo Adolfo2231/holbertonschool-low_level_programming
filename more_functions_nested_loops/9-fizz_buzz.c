@@ -25,7 +25,7 @@ void multiplo(int n)
 	}
 	else if (multiplo5 == 0)
 	{
-		printf("Buzzz ");
+		printf("Buzz ");
 	}
 	else
 	{
