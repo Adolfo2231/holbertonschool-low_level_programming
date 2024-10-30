@@ -13,8 +13,6 @@ void puts2(char *str)
 	while (*str != '\0') /* Loop until the null terminator is reached */
 	{
 		_putchar(*str);
-		_putchar('\n');
-
 		str += 2; /* Move to the next char */
 	}
 }
