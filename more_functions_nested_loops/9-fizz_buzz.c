@@ -27,6 +27,10 @@ void multiplo(int n)
 	{
 		printf("Buzz ");
 	}
+	else if (n > 99)
+	{
+		printf("Buzz");
+	}
 	else
 	{
 		printf("%d ", n);
