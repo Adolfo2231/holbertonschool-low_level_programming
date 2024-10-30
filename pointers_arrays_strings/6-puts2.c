@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <string.h> /* Include for strlen */
+#include "2-strlen" /* Include for strlen */
 
 /**
  * puts2 - Prints every other character of a string, starting with the first.
