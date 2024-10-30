@@ -13,7 +13,7 @@ void puts2(char *str)
 {
 	size_t i; /* Use size_t for compatibility with strlen */
 
-	for (i = 0; i < strlen(str); i++) /* Correctly use strlen on str */
+	for (i = 0; i < _strlen(str); i++) /* Correctly use strlen on str */
 	{
 		if ((i % 2) == 0) /* Check if index is even */
 		{
