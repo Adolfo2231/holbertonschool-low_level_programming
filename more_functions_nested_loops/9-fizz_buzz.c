@@ -15,7 +15,11 @@ void multiplo(int n)
 	int multiplo3 = n % 3;
 	int multiplo5 = n % 5;
 
-	if (multiplo3 == 0 && multiplo5 == 0)
+	if (n > 99)
+	{
+		printf("Buzz");
+	}
+	else if (multiplo3 == 0 && multiplo5 == 0)
 	{
 		printf("FizzBuzz ");
 	}
@@ -26,10 +30,6 @@ void multiplo(int n)
 	else if (multiplo5 == 0)
 	{
 		printf("Buzz ");
-	}
-	else if (n > 99)
-	{
-		printf("Buzz");
 	}
 	else
 	{
