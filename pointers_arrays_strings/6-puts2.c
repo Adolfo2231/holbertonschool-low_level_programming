@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <string.h> /* Include for strlen */
 
 /**
  * puts2 - Prints every other character of a string, starting with the first.
@@ -10,12 +12,16 @@
 
 void puts2(char *str)
 {
-	int i = 0;
+	size_t i; /* Use size_t for compatibility with strlen */
 
-	while (str[i] != '\0') /* Loop until the null terminator is reached */
+	for (i = 0; i < strlen(str); i++) /* Correctly use strlen on str */
 	{
-		_putchar(str[i]); /* Print the current character */
-		i += 2;           /* Move to every other character */
+		if ((i % 2) == 0) /* Check if index is even */
+		{
+			_putchar(str[i]); /* Print the character at index i */
+		}
 	}
 	_putchar('\n'); /* Print a newline at the end */
 }
+
+
