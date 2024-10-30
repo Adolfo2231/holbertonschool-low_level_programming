@@ -10,10 +10,12 @@
 
 void puts2(char *str)
 {
-	while (*str != '\0') /* Loop until the null terminator is reached */
-	{
-		_putchar(*str);
-		str += 2; /* Move to the next char */
-	}
-	_putchar('\n');
+    int i = 0;
+
+    while (str[i] != '\0') /* Loop until the null terminator is reached */
+    {
+        _putchar(str[i]); /* Print the current character */
+        i += 2;           /* Move to every other character */
+    }
+    _putchar('\n'); /* Print a newline at the end */
 }
