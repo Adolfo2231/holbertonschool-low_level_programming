@@ -10,9 +10,8 @@ int _atoi(char *s)
 {
 	int sign = 1;
 	int result = 0;
-	int overflow_check;
 
-	/* Skip any leading characters until finding a sign or digit */
+	/* Skip leading characters until finding a sign or digit */
 	while (*s && (*s < '0' || *s > '9'))
 	{
 		if (*s == '-')
@@ -23,13 +22,16 @@ int _atoi(char *s)
 	/* Convert each digit to an integer */
 	while (*s >= '0' && *s <= '9')
 	{
-		/* Check for overflow before updating result */
-		overflow_check = result;
-		result = result * 10 + (*s - '0');
-
-		if (overflow_check != result / 10)
+		/* Check if adding the next digit would cause overflow */
+		if (result > (2147483647 - (*s - '0')) / 10)
+		{
 			return (sign == 1 ? 2147483647 : -2147483648);
+		}
+
+		result = result * 10 + (*s - '0');
 		s++;
 	}
+
 	return (result * sign);
 }
+
