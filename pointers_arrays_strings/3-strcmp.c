@@ -1,34 +1,38 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * _strncpy - Copies a string up to `n` characters from `src` to `dest`.
- * @dest: The destination buffer where the content is copied.
- * @src: The source string to be copied.
- * @n: The maximum number of characters to copy from `src`.
+ * _strcmp - Compares two strings.
+ * @s1: The first string to be compared.
+ * @s2: The second string to be compared.
  *
- * Description: This function copies up to `n` characters from `src` to `dest`.
- *              If `src` is shorter than `n`, the remaining bytes in `dest`
- *              will be filled with null bytes (`\0`). If `src` has `n` or more
- *              bytes, `dest` will not be null-terminated.
+ * Description: This function compares the strings `s1` and `s2`
+ *              lexicographically. It returns an integer less than,
+ *              equal to, or greater than zero if `s1` is found,
+ *              respectively, to be less than,
+ *              to match, or be greater than `s2`.
  *
- * Return: A pointer to the destination string `dest`.
+ * Return: An integer result of the comparison:
+ *         - 0 if `s1` and `s2` are equal
+ *         - Negative if `s1` is less than `s2`
+ *         - Positive if `s1` is greater than `s2`
  */
-char *_strncpy(char *dest, char *src, int n)
+
+int _strcmp(char *s1, char *s2)
 {
-	int i;
+	int i = 0;
 
-	/* Copy characters from `src` to `dest` until `n` characters are copied */
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	/* Compare characters in `s1` and `s2` one by one */
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (s1[i] != s2[i])
+		{
+			/* Return the difference between the ASCII values of the characters */
+			return (s1[i] - s2[i]);
+		}
+		i++;
 	}
 
-	/* Pad with null bytes if `src` is shorter than `n` */
-	for (; i < n; i++)
-	{
-		dest[i] = '\0';
-	}
-
-	return (dest);
+	/* If loop exits, the strings are identical up to this point */
+	return (s1[i] - s2[i]);
 }
 
