@@ -10,24 +10,24 @@
  */
 char *_strchr(char *s, char c)
 {
-    int i = 0;
+	int i = 0;
 
-    /* Loop through each character in the string */
-    while (s[i] != '\0')
-    {
-        if (s[i] == c)
-        {
-            return (&s[i]); /* Return address of the first occurrence */
-        }
-        i++;
-    }
+	/* Loop through each character in the string */
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+		{
+			return (&s[i]); /* Return address of the first occurrence */
+		}
+		i++;
+	}
 
-    /* Check for the null terminator, if c is '\0' */
-    if (c == '\0')
-    {
-        return (&s[i]); /* Return address of the null terminator */
-    }
+	/* Check for the null terminator, if c is '\0' */
+	if (c == '\0')
+	{
+		return (&s[i]); /* Return address of the null terminator */
+	}
 
-    return (s);
+	return (s);
 }
 
