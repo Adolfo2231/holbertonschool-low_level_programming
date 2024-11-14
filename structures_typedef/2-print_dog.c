@@ -25,7 +25,7 @@ void print_dog(struct dog *d)/* Receive a pointer to a dog struct */
 	}
 	if (d->age == 0)
 	{
-		printf("Age:(nil)\n");
+		printf("Age: %f\n", d->age);
 	}
 	else
 	{
