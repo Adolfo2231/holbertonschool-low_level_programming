@@ -1,5 +1,6 @@
 #include "dog.h"
-
+#include <stddef.h>
+#include <stdlib.h>
 /**
  * init_dog - Defines a dog's attributes
  *
@@ -14,7 +15,7 @@
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (d == NULL)
-		return (NULL);
+		exit (1);
 
 	d->name = name;
 	d->age = age;
