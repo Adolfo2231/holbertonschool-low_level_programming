@@ -29,7 +29,7 @@ void print_dog(struct dog *d)/* Receive a pointer to a dog struct */
 	}
 	else
 	{
-		printf("Age: %.1f\n", d->age);
+		printf("Age: %.f\n", d->age);
 	}
 
 	if (d->owner == NULL)
