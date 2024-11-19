@@ -30,19 +30,11 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if (argv[2][0] == '/' && (num1 == 0 || num2 == 0))
+	if (argv[2][0] == '/' || (argv[2][0] == '%' && (num1 == 0 || num2 == 0)))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-
-	if (argv[2][0] == '%' && (num1 == 0 || num2 == 0))
-	{
-		printf("Error\n");
-		exit(100);
-	}
-
-
 	result = operation(num1, num2);
 	printf("%d\n", result);
 
