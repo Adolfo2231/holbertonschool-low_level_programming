@@ -30,6 +30,13 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
+	if (operator == '/' && divisor == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
+
 	result = operation(num1, num2);
 	printf("%d\n", result);
 
