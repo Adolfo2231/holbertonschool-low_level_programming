@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 /**
+<<<<<<< HEAD
  * print_numbers - Prints numbers followed by a separator.
  * @separator: The string to be printed between numbers.
  * @n: The number of integers passed to the function.
