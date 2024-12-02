@@ -2,6 +2,7 @@
 #define LISTS_H
 
 #include <stddef.h>  /* Para size_t */
+#include <stdio.h>
 
 /**
  * struct list_s - Singly linked list node structure
@@ -12,7 +13,8 @@
  */
 typedef struct list_s
 {
-	char *str;          /**< String stored in the node */
+	char *str;	/**< String stored in the node */
+	unsigned len;
 	struct list_s *next;/**< Pointer to the next node in the list */
 } list_t;
 
