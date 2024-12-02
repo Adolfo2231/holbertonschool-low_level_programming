@@ -18,7 +18,7 @@ size_t print_list(const list_t *h)
 		}
 		else
 		{
-			printf("[%lu] %s\n", node_count + 1, h->str);  /* Imprime el string */
+			printf("[%u] %s\n", h->len, h->str);  /* Imprime el string */
 		}
 
 		node_count++;  /* Incrementa el contador de nodos */
