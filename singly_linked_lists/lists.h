@@ -34,6 +34,18 @@ typedef struct list_s
 size_t print_list(const list_t *h);
 
 /**
+ * list_len - Returns the number of elements in a linked list
+ * @h: A pointer to the head of the list
+ *
+ * Return: The number of elements in the list
+ *
+ * Description: This function traverses through the entire linked list and
+ *              counts the number of nodes. It returns the number of nodes
+ *              in the list.
+ */
+size_t list_len(const list_t *h);
+
+/**
  * add_node - Adds a new node at the beginning of the list
  * @head: A pointer to the head of the list
  * @str: The string to store in the new node
@@ -72,3 +84,4 @@ list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 
 #endif /* LISTS_H */
+
